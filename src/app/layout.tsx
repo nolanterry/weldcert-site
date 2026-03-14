@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     description: "Track welder qualifications, prevent lapses, generate audit reports. Smart alerts and mobile logging. Try free for 14 days.",
   },
   twitter: { card: "summary_large_image" },
+  icons: {
+    icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
 };
 
 const jsonLd = {
