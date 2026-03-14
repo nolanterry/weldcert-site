@@ -24,7 +24,8 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-1.5">
-          <Image src="/logo-dark.svg" alt="WeldCert" width={130} height={36} />
+          <Image src="/logo.svg" alt="WeldCert" width={28} height={28} />
+          <span className="font-bold text-lg text-gray-900">WeldCert</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

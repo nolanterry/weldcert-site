@@ -30,7 +30,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-1.5 mb-4">
-              <Image src="/logo-light.svg" alt="WeldCert" width={120} height={32} />
+              <Image src="/logo.svg" alt="WeldCert" width={28} height={28} className="invert" />
+              <span className="font-bold text-lg">WeldCert</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               AWS D1.1 and ASME IX compliant welder certification tracking software that keeps your shop audit-ready.
