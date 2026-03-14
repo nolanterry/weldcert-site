@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const NAV = [
   { label: "Features", href: "/features" },
@@ -23,10 +24,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-1.5">
-          <span className="text-xl font-bold tracking-tight">
-            Weld<span className="text-brand">Cert</span>
-          </span>
-          <CheckCircle className="text-brand" size={18} strokeWidth={3} />
+          <Image src="/logo.svg" alt="WeldCert" width={130} height={36} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

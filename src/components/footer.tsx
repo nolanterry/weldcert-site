@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const PRODUCT_LINKS = [
   { label: "Features", href: "/features" },
@@ -30,10 +30,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-1.5 mb-4">
-              <span className="text-lg font-bold tracking-tight">
-                Weld<span className="text-brand">Cert</span>
-              </span>
-              <CheckCircle className="text-brand" size={16} strokeWidth={3} />
+              <Image src="/logo.svg" alt="WeldCert" width={120} height={32} className="invert" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               AWS D1.1 and ASME IX compliant welder certification tracking software that keeps your shop audit-ready.
