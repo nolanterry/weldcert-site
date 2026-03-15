@@ -79,8 +79,8 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} WeldCert. All rights reserved.</p>
           <div className="flex gap-6">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
+            <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
