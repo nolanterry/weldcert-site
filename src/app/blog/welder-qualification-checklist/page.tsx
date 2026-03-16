@@ -11,7 +11,59 @@ export const metadata: Metadata = {
 
 export default function WelderQualificationChecklistPage() {
   return (
+    
+  const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Complete Welder Qualification Checklist: AWS D1.1 & ASME Section IX",
+  "description": "Step-by-step welder qualification checklist covering AWS D1.1 and ASME Section IX requirements. Essential forms, test procedures, and documentation for 2026 compliance.",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+  "author": {
+    "@type": "Organization",
+    "name": "WeldCert",
+    "url": "https://weldcert.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WeldCert",
+    "url": "https://weldcert.io"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weldcert.io/blog/welder-qualification-checklist"
+  }
+};
+  
+  const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://weldcert.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://weldcert.io/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Complete Welder Qualification Checklist: AWS D1.1 & ASME Section IX",
+      "item": "https://weldcert.io/blog/welder-qualification-checklist"
+    }
+  ]
+};
+
+  return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main>
         {/* Hero */}

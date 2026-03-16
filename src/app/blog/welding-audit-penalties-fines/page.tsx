@@ -11,7 +11,59 @@ export const metadata: Metadata = {
 
 export default function WeldingAuditPenaltiesFinesPage() {
   return (
+    
+  const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AWS & ASME Welding Audit Penalties: What Non-Compliance Actually Costs",
+  "description": "Real costs of welding certification audit violations in 2026. Breakdown of penalty tiers from $25K serious violations to $250K willful violations, actual citation examples, and how fines compound across multiple welders and WPS violations.",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+  "author": {
+    "@type": "Organization",
+    "name": "WeldCert",
+    "url": "https://weldcert.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WeldCert",
+    "url": "https://weldcert.io"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weldcert.io/blog/welding-audit-penalties-fines"
+  }
+};
+  
+  const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://weldcert.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://weldcert.io/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AWS & ASME Welding Audit Penalties: What Non-Compliance Actually Costs",
+      "item": "https://weldcert.io/blog/welding-audit-penalties-fines"
+    }
+  ]
+};
+
+  return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main>
         {/* Hero */}
