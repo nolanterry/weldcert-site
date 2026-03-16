@@ -21,34 +21,127 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "WeldCert",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "iOS, Android, Web",
-  description: "Mobile-first welder certification and qualification tracking software. Prevents lapsed qualifications, generates audit reports for AWS D1.1, ASME IX compliance.",
-  offers: {
-    "@type": "Offer",
-    price: "79",
-    priceCurrency: "USD",
-    priceValidUntil: "2027-12-31",
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "WeldCert",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "iOS, Android, Web",
+    url: "https://weldcert.io",
+    description:
+      "Mobile-first welder certification and qualification tracking software. Prevents lapsed qualifications, generates audit reports for AWS D1.1, ASME IX compliance.",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: "79",
+      highPrice: "299",
+      priceCurrency: "USD",
+      offerCount: "3",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "89",
+    },
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "89",
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "WeldCert",
+    url: "https://weldcert.io",
+    logo: "https://weldcert.io/favicon-32.png",
+    description:
+      "Welder certification and qualification tracking software for fabrication shops and welding contractors.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      url: "https://weldcert.io/demo",
+    },
+    sameAs: [],
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Does WeldCert meet AWS D1.1 and ASME Section IX requirements?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. WeldCert's qualification tracking is built directly from AWS D1.1, ASME Section IX, API 1104, and OSHA 29 CFR 1910.252 requirements. Every welder qualification, continuity record, and activity log maps to specific regulatory requirements.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can my welders use WeldCert without cell service?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. WeldCert works offline on any smartphone. Welders can log daily activity, record process details, and update their status without connectivity. Everything syncs automatically when they're back in range.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does it take to log daily activity?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most welders complete their daily activity log in under 30 seconds. That's faster than filling out a paper timesheet — and the result is a timestamped, process-documented digital record that automatically maintains their continuity requirements.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What happens when a welder's qualification is about to expire?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "WeldCert automatically sends email and SMS alerts 30, 60, and 90 days before any qualification expires. Quality managers get instant notifications with renewal deadlines.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I try WeldCert before committing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. We offer a 14-day free trial with up to 15 welders. No credit card required. You'll have access to every feature so you can see how WeldCert works with your actual team and processes.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does pricing work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "WeldCert starts at $79/month (or $59/month on annual billing) for up to 15 welders. Pro is $149/month for up to 50 welders. Enterprise is $299/month for unlimited welders. Every plan includes all features, smart alerts, and support.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Will auditors accept digital qualification records?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. AWS, ASME, and OSHA inspectors require that qualification records be maintained and available for review — they do not require paper. Digital records are often preferred because they're organized and searchable.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I get my team started?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sign up for a free trial, add your welders to the roster, upload their current qualifications, and they can start logging activity the same day. No training required.",
+        },
+      },
+    ],
+  },
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {structuredData.map((data, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          />
+        ))}
         {children}
       </body>
     </html>
