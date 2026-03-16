@@ -10,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function AWSD11WelderQualificationRequirementsPage() {
-  return (
-    
   const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -19,56 +17,6 @@ export default function AWSD11WelderQualificationRequirementsPage() {
   "description": "Everything you need to know about AWS D1.1 welder qualification requirements: test procedures, documentation, continuity rules, and compliance tracking for structural steel fabrication.",
   "datePublished": "2026-03-07",
   "dateModified": "2026-03-07",
-  "author": {
-    "@type": "Organization",
-    "name": "WeldCert",
-    "url": "https://weldcert.io"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "WeldCert",
-    "url": "https://weldcert.io"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://weldcert.io/blog/aws-d1-1-welder-qualification-requirements"
-  }
-};
-  
-  const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://weldcert.io"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://weldcert.io/blog"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Complete Guide to AWS D1.1 Welder Qualification Requirements in 2026",
-      "item": "https://weldcert.io/blog/aws-d1-1-welder-qualification-requirements"
-    }
-  ]
-};
-
-  return (
-    
-  const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Complete Guide to AWS D1.1 Welder Qualification Requirements in 2026",
-  "description": "Everything you need to know about AWS D1.1 welder qualification requirements: test procedures, documentation, continuity rules, and compliance tracking for structural steel fabrication.",
-  "datePublished": "2026-03-01",
-  "dateModified": "2026-03-01",
   "author": {
     "@type": "Organization",
     "name": "WeldCert",
