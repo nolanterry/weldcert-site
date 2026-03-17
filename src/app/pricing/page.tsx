@@ -9,6 +9,7 @@ import { ComparisonTable } from "./comparison-table";
 export const metadata: Metadata = {
   title: "Pricing",
   description: "WeldCert pricing: 14-day free trial, then starting at $79/mo for 15 welders. Pro $149/mo for 50 welders. All features included. Cheaper than one OSHA fine.",
+  alternates: { canonical: "/pricing" },
 };
 
 export default function PricingPage() {

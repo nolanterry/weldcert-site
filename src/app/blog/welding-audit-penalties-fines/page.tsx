@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "AWS & ASME Welding Audit Penalties: What Non-Compliance Actually Costs",
   description:
     "Real costs of welding certification audit violations in 2026. Breakdown of penalty tiers from $25K serious violations to $250K willful violations, actual citation examples, and how fines compound across multiple welders and WPS violations.",
+  alternates: { canonical: "/blog/welding-audit-penalties-fines" },
 };
 
 export default function WeldingAuditPenaltiesFinesPage() {

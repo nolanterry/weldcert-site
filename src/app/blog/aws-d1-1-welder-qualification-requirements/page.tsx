@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Complete Guide to AWS D1.1 Welder Qualification Requirements in 2026",
   description:
     "Everything you need to know about AWS D1.1 welder qualification requirements: test procedures, documentation, continuity rules, and compliance tracking for structural steel fabrication.",
+  alternates: { canonical: "/blog/aws-d1-1-welder-qualification-requirements" },
 };
 
 export default function AWSD11WelderQualificationRequirementsPage() {

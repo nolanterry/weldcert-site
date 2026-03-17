@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "WeldCert vs WeldTrace — Welder Certification Tracking Comparison",
   description:
     "Compare WeldCert and WeldTrace for welder qualification tracking. WeldCert offers transparent pricing starting at $79/mo with a 14-day free trial. WeldTrace requires enterprise sales engagement.",
+  alternates: { canonical: "/compare/weldtrace" },
 };
 
 const QUICK_FACTS = [

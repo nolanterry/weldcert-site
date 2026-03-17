@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Book a Demo — See WeldCert in Action",
   description: "Schedule a personalized demo of WeldCert welding certification management software. See continuity tracking, WPS/PQR management, and audit-ready reporting.",
+  alternates: { canonical: "/demo" },
 };
 
 const DEMO_INCLUDES = [

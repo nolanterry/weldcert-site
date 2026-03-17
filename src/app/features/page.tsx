@@ -7,6 +7,7 @@ import { FeatureDeepDive } from "./feature-deep-dive";
 export const metadata: Metadata = {
   title: "Features",
   description: "WeldCert features: welder roster, continuity dashboard, WPS/PQR management, smart alerts, PDF audit exports, and mobile activity logging. Built for AWS D1.1 and ASME IX compliance.",
+  alternates: { canonical: "/features" },
 };
 
 export default function FeaturesPage() {

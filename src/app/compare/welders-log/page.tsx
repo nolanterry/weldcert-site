@@ -8,6 +8,7 @@ import { Check, X, Clock, Shield, Users } from "lucide-react";
 export const metadata: Metadata = {
   title: "WeldCert vs Welders Log Comparison",
   description: "Compare WeldCert and Welders Log welder certification tracking software. WeldCert offers modern mobile-first design with a 14-day free trial. Welders Log is legacy desktop software.",
+  alternates: { canonical: "/compare/welders-log" },
 };
 
 const QUICK_FACTS = [

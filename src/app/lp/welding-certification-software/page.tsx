@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Welding Certification Tracking Software | WeldCert",
   description: "Track welder qualifications, WPS/PQR records, and continuity logs in one platform. Built for AISC-certified fabrication shops. $79/mo, unlimited logs.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/lp/welding-certification-software" },
 };
 
 const PAIN_POINTS = [

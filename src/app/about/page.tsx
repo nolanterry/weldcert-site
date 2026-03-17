@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description: "WeldCert was built by people who understand welding compliance. Our mission: make every fabrication shop audit-ready.",
+  alternates: { canonical: "/about" },
 };
 
 const VALUES = [

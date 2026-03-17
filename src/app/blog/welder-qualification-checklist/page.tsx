@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Complete Welder Qualification Checklist: AWS D1.1 & ASME Section IX",
   description:
     "Step-by-step welder qualification checklist covering AWS D1.1 and ASME Section IX requirements. Essential forms, test procedures, and documentation for 2026 compliance.",
+  alternates: { canonical: "/blog/welder-qualification-checklist" },
 };
 
 export default function WelderQualificationChecklistPage() {

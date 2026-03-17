@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "WeldCert Help Center",
     description: "Everything you need to manage welding certifications and stay code-compliant with WeldCert.",
   },
+  alternates: { canonical: "/help" },
 };
 
 export default function HelpPage() {

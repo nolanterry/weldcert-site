@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "WeldCert vs WeldsTracker — Welder Certification Software Comparison",
   description:
     "Compare WeldCert and WeldsTracker for welder qualification tracking. WeldCert offers flat-rate pricing, modern mobile apps, and AI-powered features. WeldsTracker charges per user + per welder.",
+  alternates: { canonical: "/compare/weldstracker" },
 };
 
 const QUICK_FACTS = [

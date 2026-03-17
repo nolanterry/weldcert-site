@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog",
   description: "Welder certification guides, AWS D1.1 compliance tips, and welding industry insights from WeldCert. Stay informed on qualification tracking and best practices.",
+  alternates: { canonical: "/blog" },
 };
 
 const POSTS = [

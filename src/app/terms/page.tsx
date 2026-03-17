@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "WeldCert terms of service — the agreement between you and WeldCert.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "AWS D1.1 & ASME IX Welding Compliance Software | WeldCert",
   description: "Meet AWS D1.1, ASME Section IX, and AISC certification requirements with automated continuity tracking, WPS/PQR management, and one-click audit packages.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/lp/aws-weld-compliance" },
 };
 
 const FRAMEWORKS = [

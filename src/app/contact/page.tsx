@@ -7,6 +7,7 @@ import { ContactForm } from "./contact-form";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact WeldCert for questions about welder certification software, enterprise pricing, or AWS D1.1 compliance. We're here to help.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

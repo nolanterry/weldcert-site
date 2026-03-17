@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "WeldCert vs WeldEye (Kemppi) — Welding Software Comparison",
   description:
     "Compare WeldCert and Kemppi WeldEye for welder qualification and weld management. WeldCert works with any equipment brand. WeldEye is tied to Kemppi welding machines.",
+  alternates: { canonical: "/compare/weldeye" },
 };
 
 const QUICK_FACTS = [
