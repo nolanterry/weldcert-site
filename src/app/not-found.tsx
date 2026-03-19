@@ -17,7 +17,7 @@ const suggestions = [
 
 export default function NotFound() {
   return (
-    <main className="min-h-[70vh] flex items-center justify-center px-6 py-24">
+    <main id="main-content" className="min-h-[70vh] flex items-center justify-center px-6 py-24">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-6xl font-bold" style={{ color: "var(--color-brand, #FF6B00)" }}>
           404

@@ -14,7 +14,7 @@ export default function FeaturesPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <div className="bg-gradient-to-br from-navy via-navy-light to-navy py-20 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Built for Fabrication Shops.<br />

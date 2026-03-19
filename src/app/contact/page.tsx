@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <section className="bg-gradient-to-br from-navy via-navy-light to-navy py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Get in Touch</h1>

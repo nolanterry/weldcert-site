@@ -82,7 +82,7 @@ export default function ChangelogPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-gradient-to-br from-navy via-navy-light to-navy py-20 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Changelog</h1>

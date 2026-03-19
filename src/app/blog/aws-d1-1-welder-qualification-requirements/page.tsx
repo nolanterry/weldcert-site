@@ -64,7 +64,7 @@ export default function AWSD11WelderQualificationRequirementsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-gradient-to-br from-navy via-navy-light to-navy py-20 px-4">
           <div className="max-w-3xl mx-auto">

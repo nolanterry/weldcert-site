@@ -84,7 +84,7 @@ export default function WeldTraceComparisonPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-gradient-to-br from-navy via-navy-light to-navy py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

@@ -27,7 +27,7 @@ const COMPLIANCE_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-white">
+    <footer role="contentinfo" className="bg-navy text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
@@ -82,6 +82,7 @@ export function Footer() {
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link href="/accessibility" className="hover:text-gray-300 transition-colors">Accessibility</Link>
           </div>
         </div>
       </div>

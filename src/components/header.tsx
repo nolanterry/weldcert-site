@@ -31,7 +31,7 @@ export function Header() {
           <span className="font-bold text-lg text-gray-900">WeldCert</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
               {n.label}
@@ -43,13 +43,19 @@ export function Header() {
           </a>
         </nav>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden" aria-label="Toggle menu">
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+        >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
+        <nav id="mobile-menu" aria-label="Mobile navigation" className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="block text-gray-600 py-2">
               {n.label}
@@ -59,7 +65,7 @@ export function Header() {
           <a href={SIGNUP_URL} className="block bg-brand text-white text-center font-medium px-5 py-3 rounded-lg">
             Start Free Trial
           </a>
-        </div>
+        </nav>
       )}
     </header>
   );
