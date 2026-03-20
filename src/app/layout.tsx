@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
 import { CookieConsent } from "@/components/cookie-consent";
+import { PromoBar } from "@/components/promo-bar";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -143,6 +144,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+        <PromoBar />
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
