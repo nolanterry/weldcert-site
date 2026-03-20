@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -956,6 +957,7 @@ export default function WeldingAuditPenaltiesFinesPage() {
             </div>
           </div>
         </article>
+          <div className="not-prose max-w-3xl mx-auto px-4"><NewsletterSignup /></div>
       </main>
       <Footer />
     </>
