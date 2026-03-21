@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { NewsletterSignup } from "@/components/newsletter-signup";
-import Link from "next/link";
+import { BlogSearch } from "@/components/blog-search";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -169,31 +169,7 @@ export default function BlogPage() {
 
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="space-y-8">
-              {POSTS.map((post) => (
-                <article key={post.slug} className="border border-gray-100 rounded-xl p-6 hover:border-brand/30 hover:shadow-md transition-all">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-medium text-brand bg-brand-light px-2.5 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-gray-400">{post.date}</span>
-                    <span className="text-xs text-gray-400">{post.readTime}</span>
-                  </div>
-                  <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-xl font-bold mb-2 hover:text-brand transition-colors">
-                      {post.title}
-                    </h2>
-                  </Link>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{post.excerpt}</p>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-sm font-medium text-brand hover:text-brand-dark transition-colors"
-                  >
-                    Read more →
-                  </Link>
-                </article>
-              ))}
-            </div>
+            <BlogSearch posts={POSTS} />
           </div>
         </section>
       </main>
