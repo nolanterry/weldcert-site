@@ -4,6 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 import { ReadingProgressBar } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { RelatedPosts } from "@/components/related-posts";
+import { AuthorByline } from "@/components/author-byline";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -80,6 +81,7 @@ export default function WelderQualificationChecklistPage() {
               <span className="text-xs text-gray-400">March 4, 2026</span>
               <span className="text-xs text-gray-400">10 min read</span>
             </div>
+            <AuthorByline slug="weldcert-team" />
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
               Complete Welder Qualification Checklist: AWS D1.1 & ASME Section IX
             </h1>

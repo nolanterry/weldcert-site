@@ -4,6 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 import { ReadingProgressBar } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { RelatedPosts } from "@/components/related-posts";
+import { AuthorByline } from "@/components/author-byline";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -23,9 +24,9 @@ export default function AWSD11WelderQualificationRequirementsPage() {
   "datePublished": "2026-03-07",
   "dateModified": "2026-03-07",
   "author": {
-    "@type": "Organization",
-    "name": "WeldCert",
-    "url": "https://weldcert.io"
+    "@type": "Person",
+    "name": "Nolan Terry",
+    "url": "https://weldcert.io/blog/authors/nolan-terry"
   },
   "publisher": {
     "@type": "Organization",
@@ -80,6 +81,7 @@ export default function AWSD11WelderQualificationRequirementsPage() {
               <span className="text-xs text-gray-400">March 5, 2026</span>
               <span className="text-xs text-gray-400">15 min read</span>
             </div>
+            <AuthorByline slug="nolan-terry" />
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
               Complete Guide to AWS D1.1 Welder Qualification Requirements in 2026
             </h1>

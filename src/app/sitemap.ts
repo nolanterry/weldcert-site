@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { AUTHORS } from "@/lib/authors";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://weldcert.io";
@@ -37,6 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    { url: `${base}/blog/authors`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
+    ...AUTHORS.map((author) => ({
+      url: `${base}/blog/authors/${author.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
     { url: `${base}/compare/welders-log`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/compare/spreadsheets`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

@@ -18,6 +18,8 @@ const POSTS = [
     date: "March 8, 2026",
     readTime: "13 min read",
     category: "Safety",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "consumable-qualification-requirements",
@@ -26,6 +28,8 @@ const POSTS = [
     date: "March 8, 2026",
     readTime: "11 min read",
     category: "Materials",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "welder-qualification-record-template",
@@ -34,6 +38,8 @@ const POSTS = [
     date: "March 8, 2026",
     readTime: "10 min read",
     category: "Templates",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "asme-section-ix-continuity-rules",
@@ -42,6 +48,8 @@ const POSTS = [
     date: "March 8, 2026",
     readTime: "12 min read",
     category: "Compliance",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "wps-pqr-management-guide",
@@ -50,6 +58,8 @@ const POSTS = [
     date: "March 8, 2026",
     readTime: "11 min read",
     category: "Compliance",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "aws-d1-1-welder-qualification-requirements",
@@ -58,6 +68,8 @@ const POSTS = [
     date: "March 7, 2026",
     readTime: "11 min read",
     category: "Qualifications",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "welding-code-violation-penalties",
@@ -66,6 +78,8 @@ const POSTS = [
     date: "March 6, 2026",
     readTime: "12 min read",
     category: "Compliance",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "api-1104-pipeline-welder-qualification",
@@ -74,6 +88,8 @@ const POSTS = [
     date: "March 5, 2026",
     readTime: "13 min read",
     category: "Pipeline",
+    author: "nolan-terry",
+    authorName: "Nolan Terry",
   },
   {
     slug: "welder-certification-tracking-best-practices",
@@ -82,6 +98,8 @@ const POSTS = [
     date: "March 4, 2026",
     readTime: "12 min read",
     category: "Technology",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "welder-certification-software-comparison",
@@ -90,14 +108,18 @@ const POSTS = [
     date: "March 3, 2026",
     readTime: "13 min read",
     category: "Technology",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "aws-d1-1-compliance-complete-guide",
-    title: "AWS D1.1 Compliance Requirements: The Complete 2026 Guide", 
+    title: "AWS D1.1 Compliance Requirements: The Complete 2026 Guide",
     excerpt: "Everything you need to know about AWS D1.1 structural welding compliance — welder qualification requirements, WPS documentation, inspection procedures, and how to maintain certification records.",
     date: "March 1, 2026",
     readTime: "12 min read",
     category: "Compliance",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "daily-welder-activity-logging",
@@ -106,6 +128,8 @@ const POSTS = [
     date: "February 22, 2026",
     readTime: "10 min read",
     category: "Activity",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "welder-certification-software-vs-spreadsheets",
@@ -114,6 +138,8 @@ const POSTS = [
     date: "February 15, 2026",
     readTime: "9 min read",
     category: "Technology",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "aws-welding-audit-preparation",
@@ -122,6 +148,8 @@ const POSTS = [
     date: "February 8, 2026",
     readTime: "11 min read",
     category: "Compliance",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
   {
     slug: "osha-welding-safety-standards-explained",
@@ -130,6 +158,8 @@ const POSTS = [
     date: "February 1, 2026",
     readTime: "13 min read",
     category: "Regulations",
+    author: "weldcert-team",
+    authorName: "WeldCert Editorial Team",
   },
 ];
 

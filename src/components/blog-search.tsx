@@ -10,6 +10,8 @@ interface Post {
   date: string;
   readTime: string;
   category: string;
+  author?: string;
+  authorName?: string;
 }
 
 export function BlogSearch({ posts }: { posts: Post[] }) {
@@ -114,6 +116,17 @@ export function BlogSearch({ posts }: { posts: Post[] }) {
               </h2>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">{post.excerpt}</p>
+            {post.author && post.authorName && (
+              <p className="text-xs text-gray-500 mb-3">
+                By{" "}
+                <Link
+                  href={`/blog/authors/${post.author}`}
+                  className="text-orange-600 hover:text-orange-500 transition-colors"
+                >
+                  {post.authorName}
+                </Link>
+              </p>
+            )}
             <Link
               href={`/blog/${post.slug}`}
               className="text-sm font-medium text-brand hover:text-brand-dark transition-colors"

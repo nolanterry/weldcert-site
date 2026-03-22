@@ -4,6 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 import { ReadingProgressBar } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { RelatedPosts } from "@/components/related-posts";
+import { AuthorByline } from "@/components/author-byline";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -80,6 +81,7 @@ export default function WeldingAuditPenaltiesFinesPage() {
               <span className="text-xs text-gray-400">March 6, 2026</span>
               <span className="text-xs text-gray-400">12 min read</span>
             </div>
+            <AuthorByline slug="weldcert-team" />
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
               AWS & ASME Welding Audit Penalties: What Non-Compliance Actually Costs
             </h1>
