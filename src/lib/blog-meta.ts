@@ -23,6 +23,36 @@ export const BLOG_META: BlogMeta[] = [
   { slug: "wps-pqr-documentation-guide", title: "WPS & PQR Documentation Guide: Everything You Need to Know", tags: ["wps-pqr", "documentation", "standards"], author: "weldcert-team" },
 ];
 
+export function getAllTags(): { tag: string; count: number }[] {
+  const tagMap = new Map<string, number>();
+  BLOG_META.forEach((p) => p.tags.forEach((t) => tagMap.set(t, (tagMap.get(t) || 0) + 1)));
+  return Array.from(tagMap.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getPostsByTag(tag: string): BlogMeta[] {
+  return BLOG_META.filter((p) => p.tags.includes(tag));
+}
+
+export const TAG_LABELS: Record<string, string> = {
+  "asme": "ASME",
+  "aws": "AWS D1.1",
+  "qualification": "Qualification",
+  "compliance": "Compliance",
+  "inspection": "Inspection",
+  "standards": "Standards",
+  "certification": "Certification",
+  "cwi": "CWI",
+  "documentation": "Documentation",
+  "tracking": "Tracking",
+  "technology": "Technology",
+  "comparison": "Comparison",
+  "templates": "Templates",
+  "audit": "Audit",
+  "wps-pqr": "WPS/PQR",
+};
+
 export function getRelatedPosts(currentSlug: string, count = 3): BlogMeta[] {
   const current = BLOG_META.find((p) => p.slug === currentSlug);
   if (!current) return BLOG_META.filter((p) => p.slug !== currentSlug).slice(0, count);
