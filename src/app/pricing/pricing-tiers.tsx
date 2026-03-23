@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
+import { PricingToggle } from "./pricing-toggle";
 
 const SIGNUP_URL = "https://app.weldcert.io/sign-up";
 
@@ -9,7 +11,7 @@ const ALL_FEATURES = [
   "Welder roster management",
   "AWS D1.1 & ASME IX compliance",
   "Continuity dashboard (traffic lights)",
-  "WPS/PQR/WPQ management", 
+  "WPS/PQR/WPQ management",
   "Mobile activity logging",
   "Smart alerts (email/SMS)",
   "Audit export (PDF binders)",
@@ -20,46 +22,58 @@ const ALL_FEATURES = [
 const TIERS = [
   {
     name: "Starter",
-    price: "$79",
+    monthlyPrice: "$79",
+    annualPrice: "$59",
     period: "/month",
-    annualNote: "$59/mo billed annually — save $240/year",
+    annualPeriod: "/mo, billed annually",
     desc: "Up to 15 welders. Perfect for small fabrication shops.",
     cta: "Start Free Trial",
     ctaStyle: "border border-brand text-brand hover:bg-brand-light",
     href: SIGNUP_URL,
     features: ALL_FEATURES,
     highlight: false,
+    showSavings: true,
+    savings: "Save $240/year",
   },
   {
     name: "Pro",
-    price: "$149",
+    monthlyPrice: "$149",
+    annualPrice: "$119",
     period: "/month",
-    annualNote: "$119/mo billed annually — save $360/year",
+    annualPeriod: "/mo, billed annually",
     desc: "Up to 50 welders. Great for growing contractors and mid-size shops.",
     cta: "Start Free Trial",
     ctaStyle: "bg-brand text-white hover:bg-brand-dark",
     href: SIGNUP_URL,
     features: [...ALL_FEATURES, "Priority email support"],
     highlight: true,
+    showSavings: true,
+    savings: "Save $360/year",
   },
   {
     name: "Enterprise",
-    price: "$299",
+    monthlyPrice: "$299",
+    annualPrice: "$249",
     period: "/month",
-    annualNote: "$249/mo billed annually — save $600/year",
+    annualPeriod: "/mo, billed annually",
     desc: "Unlimited welders. SSO, dedicated account manager, custom onboarding.",
     cta: "Contact Sales",
     ctaStyle: "border border-gray-300 text-gray-700 hover:bg-gray-50",
     href: "/contact",
     features: [...ALL_FEATURES, "Priority email support", "SSO / SAML", "Dedicated account manager", "Custom onboarding", "SLA guarantee"],
     highlight: false,
+    showSavings: true,
+    savings: "Save $600/year",
   },
 ];
 
 export function PricingTiers() {
+  const [isAnnual, setIsAnnual] = useState(false);
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
+        <PricingToggle isAnnual={isAnnual} onToggle={setIsAnnual} />
         <div className="grid md:grid-cols-3 gap-8">
           {TIERS.map((tier, i) => (
             <motion.div
@@ -81,11 +95,28 @@ export function PricingTiers() {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{tier.name}</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-bold">{tier.price}</span>
-                  {tier.period && <span className="text-gray-500">{tier.period}</span>}
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={isAnnual ? "annual" : "monthly"}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="text-5xl font-bold"
+                    >
+                      {isAnnual ? tier.annualPrice : tier.monthlyPrice}
+                    </motion.span>
+                  </AnimatePresence>
+                  <span className="text-gray-500">{isAnnual ? tier.annualPeriod : tier.period}</span>
                 </div>
-                {tier.annualNote && (
-                  <p className="text-sm text-brand mt-2">{tier.annualNote}</p>
+                {isAnnual && tier.showSavings && tier.savings && (
+                  <motion.p
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    className="text-sm text-green-600 font-medium mt-2"
+                  >
+                    {tier.savings}
+                  </motion.p>
                 )}
                 <p className="text-sm text-gray-500 mt-3">{tier.desc}</p>
               </div>
@@ -111,7 +142,7 @@ export function PricingTiers() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-500">
-            <strong>Quick math:</strong> 10 welders = $79/mo. 30 welders = $149/mo. 100+ welders = $299/mo.
+            <strong>Quick math:</strong> 10 welders = {isAnnual ? "$59/mo" : "$79/mo"}. 30 welders = {isAnnual ? "$119/mo" : "$149/mo"}. 100+ welders = {isAnnual ? "$249/mo" : "$299/mo"}.
             <br />
             A single OSHA willful violation fine: <strong>$161,323</strong>.
           </p>
