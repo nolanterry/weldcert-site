@@ -36,6 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/demo`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/help`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/roi-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/use-cases`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/use-cases/structural-steel-fabricators`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/use-cases/pressure-vessel-manufacturers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/use-cases/pipeline-contractors`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     ...blogSlugs.map((slug) => ({
       url: `${base}/blog/${slug}`,
       lastModified: now,
