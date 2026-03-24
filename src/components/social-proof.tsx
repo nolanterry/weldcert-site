@@ -2,21 +2,13 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Shield, Smartphone, FileCheck, Clock } from "lucide-react";
 
-const LOGOS = [
-  "Pacific Steel Fabricators",
-  "Midwest Structural Steel",
-  "Gulf Coast Welding Corp",
-  "Summit Pressure Vessels",
-  "Ironworkers Union Local 25",
-  "Atlas Pipeline Contractors",
-];
-
-const STATS_ROW = [
-  { value: "2,400+", label: "Welders Tracked" },
-  { value: "18K+", label: "Qualifications Managed" },
-  { value: "99.6%", label: "Audit Pass Rate" },
-  { value: "<30 sec", label: "Avg. Daily Log Time" },
+const FEATURES_ROW = [
+  { icon: Shield, label: "AWS D1.1, ASME IX, AISC & API 1104" },
+  { icon: Smartphone, label: "Mobile-First — Works Offline" },
+  { icon: FileCheck, label: "One-Click Audit Exports" },
+  { icon: Clock, label: "30-Second Daily Logging" },
 ];
 
 export function SocialProof() {
@@ -32,21 +24,13 @@ export function SocialProof() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-center text-sm text-gray-500 mb-8 font-medium uppercase tracking-wider">
-            Trusted by fabrication shops and contractors nationwide
+            Purpose-built for welding compliance
           </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-            {LOGOS.map((name) => (
-              <div key={name} className="flex items-center gap-2 text-gray-400">
-                <div className="w-8 h-8 bg-gray-200 rounded" />
-                <span className="text-sm font-medium">{name}</span>
-              </div>
-            ))}
-          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {STATS_ROW.map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-3xl font-bold text-navy">{s.value}</div>
-                <div className="text-sm text-gray-500 mt-1">{s.label}</div>
+            {FEATURES_ROW.map((f) => (
+              <div key={f.label} className="text-center flex flex-col items-center">
+                <f.icon className="text-brand mb-3" size={28} />
+                <div className="text-sm font-medium text-gray-700">{f.label}</div>
               </div>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Shield, AlertTriangle, Flame, Star, FileCheck, Clock, BookOpen } from "lucide-react";
+import { ArrowRight, Check, Shield, AlertTriangle, Flame, FileCheck, Clock, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "AWS D1.1 & ASME IX Welding Compliance Software | WeldCert",
@@ -30,12 +30,6 @@ const FEATURES = [
   { title: "Welder Roster Management", desc: "Track certifications, test dates, employers, and qualification ranges for every welder." },
   { title: "Process-Specific Tracking", desc: "SMAW, GMAW, FCAW, GTAW, SAW — track continuity per process per position." },
   { title: "Role-Based Access", desc: "QC managers see everything. Foremen see their crew. Welders log and view their own records." },
-];
-
-const TESTIMONIALS = [
-  { name: "Tom H.", role: "CWI, AISC-Certified Fabricator", text: "We had a surprise CWI audit. I pulled every welder's continuity record, WPS, and PQR in 5 minutes. The auditor actually asked what software we use." },
-  { name: "Sarah M.", role: "Quality Manager, Pressure Vessel Mfg", text: "ASME IX compliance used to be our biggest headache. Now every performance qualification is tracked and linked to the right procedure." },
-  { name: "Ray K.", role: "Safety Director, Pipeline Contractor", text: "We run 200+ welders across 12 job sites. WeldCert is the only way we can track continuity without a full-time admin." },
 ];
 
 const SIGNUP_URL = "https://app.weldcert.io/sign-up";
@@ -136,24 +130,22 @@ export default function LPAWSWeldCompliance() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Built for Welding */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Built for CWIs, QC Managers & Shop Foremen
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="bg-gray-50 border border-gray-100 rounded-xl p-6">
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-amber-400 fill-amber-400" />)}
-                </div>
-                <p className="text-sm text-gray-600 mb-4 italic">&ldquo;{t.text}&rdquo;</p>
-                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                <p className="text-xs text-gray-400">{t.role}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
+            WeldCert is designed by people who understand welding codes — not generic compliance software
+            adapted for fabrication. Every feature maps directly to AWS, ASME, AISC, and API requirements.
+          </p>
+          <a
+            href={SIGNUP_URL}
+            className="inline-flex items-center justify-center gap-2 bg-brand text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-dark transition-colors"
+          >
+            Start Your Free Trial <ArrowRight size={18} />
+          </a>
         </div>
       </section>
 

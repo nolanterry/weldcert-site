@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Shield, AlertTriangle, Clock, FileText, Flame, Users, BarChart3, Star, Camera, Bell } from "lucide-react";
+import { ArrowRight, Check, Shield, AlertTriangle, Clock, FileText, Flame } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Welding Certification Tracking Software | WeldCert",
@@ -23,12 +23,6 @@ const FEATURES = [
   "One-click PDF audit export packages",
   "GPS & timestamp on every log entry",
   "Role-based access (QC manager, foreman, welder)",
-];
-
-const TESTIMONIALS = [
-  { name: "Mike R.", role: "QC Manager, AISC-Certified Fabricator", text: "We went from 3 filing cabinets to one dashboard. Our last CWI audit took 20 minutes instead of 2 days." },
-  { name: "Carlos D.", role: "Shop Foreman, Structural Steel", text: "Welders log their activity from their phones. No more chasing paper logs at the end of the month." },
-  { name: "Linda P.", role: "Quality Director, Pipeline Contractor", text: "The continuity tracking alone saved us. We caught 4 lapsed certs before our ASME audit." },
 ];
 
 const SIGNUP_URL = "https://app.weldcert.io/sign-up";
@@ -118,24 +112,22 @@ export default function LPWeldingCertificationSoftware() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why WeldCert */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">
-            Trusted by Fabrication Shops
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Built for Fabrication Shops
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="bg-gray-50 border border-gray-100 rounded-xl p-6">
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-amber-400 fill-amber-400" />)}
-                </div>
-                <p className="text-sm text-gray-600 mb-4 italic">&ldquo;{t.text}&rdquo;</p>
-                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                <p className="text-xs text-gray-400">{t.role}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
+            WeldCert is purpose-built for welding compliance — not a generic document tool
+            adapted for fabrication. Every feature is designed around AWS, ASME, AISC, and API code requirements.
+          </p>
+          <a
+            href={SIGNUP_URL}
+            className="inline-flex items-center justify-center gap-2 bg-brand text-white font-bold px-8 py-4 rounded-xl hover:bg-brand-dark transition-colors"
+          >
+            Start Your Free Trial <ArrowRight size={18} />
+          </a>
         </div>
       </section>
 

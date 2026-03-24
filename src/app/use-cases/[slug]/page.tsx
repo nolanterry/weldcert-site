@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { CheckCircle2, ArrowRight, Quote } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 interface UseCase {
   slug: string;
@@ -15,7 +15,6 @@ interface UseCase {
   painPoints: { title: string; desc: string }[];
   solutions: { title: string; desc: string; feature: string }[];
   metrics: { stat: string; label: string }[];
-  testimonial: { quote: string; name: string; role: string; company: string };
 }
 
 const USE_CASES: UseCase[] = [
@@ -74,13 +73,6 @@ const USE_CASES: UseCase[] = [
       { stat: "Zero", label: "lapsed qualifications with automated alerts" },
       { stat: "45 sec", label: "to find any WPS in the digital library" },
     ],
-    testimonial: {
-      quote:
-        "We're an AISC-certified fabricator running 40 welders across two shops. Before WeldCert, tracking qualifications was a full-time job for our QC manager. She spent half her week in binders. Now she spends 20 minutes a day on the dashboard and catches expiring qualifications weeks before they lapse. Our last AISC audit was the smoothest one we've ever had.",
-      name: "Tom Bridgewater",
-      role: "Quality Control Manager",
-      company: "Ironhorse Steel Fabricators",
-    },
   },
   {
     slug: "pressure-vessel-manufacturers",
@@ -137,13 +129,6 @@ const USE_CASES: UseCase[] = [
       { stat: "Zero", label: "undetected continuity lapses" },
       { stat: "60%", label: "reduction in WPS/PQR administration time" },
     ],
-    testimonial: {
-      quote:
-        "We hold U, U2, and R stamps. Managing Section IX records for 65 welders across three process types was consuming our QA department. WeldCert cut our documentation time in half and gave our Authorized Inspector something he'd never had before — instant access to any record he requested. He told us we're the most organized shop he visits.",
-      name: "Angela Moretti",
-      role: "QA Director",
-      company: "Apex Pressure Systems",
-    },
   },
   {
     slug: "pipeline-contractors",
@@ -200,13 +185,6 @@ const USE_CASES: UseCase[] = [
       { stat: "5 min", label: "to verify any welder's field qualifications" },
       { stat: "85%", label: "reduction in qualification-related project delays" },
     ],
-    testimonial: {
-      quote:
-        "We run pipeline spreads in three states simultaneously. Before WeldCert, our QC coordinator spent half his time on the phone verifying welder qualifications with the home office. Now our field inspectors pull up any welder's record on their phone in 30 seconds. Last month we onboarded 12 welders in a single day — that used to take a week of paperwork.",
-      name: "Kyle Hendricks",
-      role: "QC Superintendent",
-      company: "Monarch Pipeline Services",
-    },
   },
 ];
 
@@ -323,19 +301,19 @@ export default function UseCaseDetailPage({ params }: { params: { slug: string }
           </div>
         </section>
 
-        {/* Testimonial */}
+        {/* CTA */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <Quote className="w-10 h-10 text-amber-400 mx-auto mb-6" />
-            <blockquote className="text-xl text-gray-800 leading-relaxed italic mb-6">
-              &ldquo;{uc.testimonial.quote}&rdquo;
-            </blockquote>
-            <div>
-              <p className="font-semibold text-gray-900">{uc.testimonial.name}</p>
-              <p className="text-sm text-gray-500">
-                {uc.testimonial.role}, {uc.testimonial.company}
-              </p>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">See WeldCert in Action</h2>
+            <p className="text-gray-600 mb-8">
+              Try it free for 14 days — no credit card required. Set up your team in minutes.
+            </p>
+            <a
+              href="https://app.weldcert.io/sign-up"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Start Free Trial <ArrowRight size={18} />
+            </a>
           </div>
         </section>
 

@@ -49,11 +49,6 @@ const structuredData = [
       priceCurrency: "USD",
       offerCount: "3",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "89",
-    },
   },
   {
     "@context": "https://schema.org",
