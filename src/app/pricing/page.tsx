@@ -5,6 +5,7 @@ import { FAQSection } from "@/components/faq-section";
 import type { Metadata } from "next";
 import { PricingTiers } from "./pricing-tiers";
 import { ComparisonTable } from "./comparison-table";
+import { TrustBadges } from "./trust-badges";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -100,6 +101,7 @@ export default function PricingPage() {
         </div>
         <PricingTiers />
         <ComparisonTable />
+        <TrustBadges />
         <FAQSection />
         <CTASection />
       </main>
