@@ -10,6 +10,7 @@ const PRODUCT_LINKS = [
   { label: "Blog", href: "/blog" },
   { label: "Customers", href: "/customers" },
   { label: "Use Cases", href: "/use-cases" },
+  { label: "Resources", href: "/resources" },
   { label: "Help Center", href: "/help" },
 ];
 

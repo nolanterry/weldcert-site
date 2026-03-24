@@ -14,6 +14,7 @@ const NAV = [
   { label: "Use Cases", href: "/use-cases" },
   { label: "Customers", href: "/customers" },
   { label: "Demo", href: "/demo" },
+  { label: "Resources", href: "/resources" },
   { label: "Help", href: "/help" },
   { label: "ROI Calculator", href: "/roi-calculator" },
   { label: "Changelog", href: "/changelog" },
