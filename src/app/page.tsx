@@ -7,6 +7,7 @@ import { ComplianceSection } from "@/components/compliance-section";
 import { HowItWorks } from "@/components/how-it-works";
 import { PainSection } from "@/components/pain-section";
 import { TestimonialsSection } from "@/components/testimonials";
+import { TestimonialCarousel } from "@/components/testimonial-carousel";
 import { PricingPreview } from "@/components/pricing-preview";
 import { FAQSection } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
@@ -22,7 +23,7 @@ export default function Home() {
         <ComplianceSection />
         <HowItWorks />
         <PainSection />
-        <TestimonialsSection />
+        <TestimonialCarousel />
         <PricingPreview />
         <FAQSection />
         <CTASection />
