@@ -14,6 +14,7 @@ const NAV = [
   { label: "Customers", href: "/customers" },
   { label: "Demo", href: "/demo" },
   { label: "Help", href: "/help" },
+  { label: "ROI Calculator", href: "/roi-calculator" },
   { label: "Changelog", href: "/changelog" },
   { label: "Contact", href: "/contact" },
 ];
