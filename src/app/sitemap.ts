@@ -22,6 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "consumable-qualification-requirements",
     "welder-qualification-lapse-consequences",
     "welder-qualification-record-template",
+    "ndt-welding-inspection-methods",
+    "welding-quality-control-plan-guide",
+    "prequalified-welding-procedures-aws-d1-1",
+    "structural-welding-inspection-checklist-2026",
+    "weld-rejection-rework-costs",
+    "asme-section-ix-essential-variables",
+    "welder-performance-qualification-test-guide",
+    "welding-documentation-record-retention",
   ];
 
   return [

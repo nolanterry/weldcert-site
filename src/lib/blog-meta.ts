@@ -6,6 +6,14 @@ export interface BlogMeta {
 }
 
 export const BLOG_META: BlogMeta[] = [
+  { slug: "ndt-welding-inspection-methods", title: "Non-Destructive Testing for Welds: NDT Methods Every Fabricator Should Know", tags: ["inspection", "standards", "qualification"], author: "nolan-terry" },
+  { slug: "welding-quality-control-plan-guide", title: "How to Build a Welding Quality Control Plan That Passes Audits", tags: ["compliance", "audit", "documentation"], author: "nolan-terry" },
+  { slug: "prequalified-welding-procedures-aws-d1-1", title: "Prequalified Welding Procedures Under AWS D1.1: When You Can Skip PQR Testing", tags: ["aws", "wps-pqr", "standards"], author: "nolan-terry" },
+  { slug: "structural-welding-inspection-checklist-2026", title: "Structural Welding Inspection Checklist for 2026: Before, During, and After", tags: ["inspection", "aws", "compliance"], author: "nolan-terry" },
+  { slug: "weld-rejection-rework-costs", title: "Weld Rejection Rates: What Rework Actually Costs Your Shop", tags: ["standards", "inspection", "tracking"], author: "weldcert-team" },
+  { slug: "asme-section-ix-essential-variables", title: "ASME Section IX Essential Variables: The Complete Guide to QW-350", tags: ["asme", "qualification", "compliance"], author: "weldcert-team" },
+  { slug: "welder-performance-qualification-test-guide", title: "Welder Performance Qualification Tests: Positions, Methods, and Pass Criteria", tags: ["qualification", "certification", "asme"], author: "weldcert-team" },
+  { slug: "welding-documentation-record-retention", title: "Welding Documentation and Record Retention: How Long to Keep What", tags: ["documentation", "compliance", "audit"], author: "weldcert-team" },
   { slug: "asme-section-ix-continuity-rules", title: "ASME Section IX Continuity Rules: Don't Let Qualifications Lapse", tags: ["asme", "qualification", "compliance"], author: "nolan-terry" },
   { slug: "aws-d1-1-table-4-10-explained", title: "AWS D1.1 Table 4.10 Explained: Visual Acceptance Criteria", tags: ["aws", "inspection", "standards"], author: "nolan-terry" },
   { slug: "aws-d1-1-welder-qualification-requirements", title: "AWS D1.1 Welder Qualification Requirements: Complete Guide", tags: ["aws", "qualification", "certification"], author: "nolan-terry" },
@@ -51,6 +59,7 @@ export const TAG_LABELS: Record<string, string> = {
   "templates": "Templates",
   "audit": "Audit",
   "wps-pqr": "WPS/PQR",
+  "business": "Business",
 };
 
 export function getRelatedPosts(currentSlug: string, count = 3): BlogMeta[] {
