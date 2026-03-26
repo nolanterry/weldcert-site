@@ -30,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "asme-section-ix-essential-variables",
     "welder-performance-qualification-test-guide",
     "welding-documentation-record-retention",
+    "aws-d1-1-table-4-10-explained",
+    "cwi-certification-requirements",
+    "weld-failure-investigation-documentation",
+    "weld-visual-inspection-guide",
+    "welder-requalification-frequency-guide",
+    "welding-procedure-specification-guide",
   ];
 
   return [
