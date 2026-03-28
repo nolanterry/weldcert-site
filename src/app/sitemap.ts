@@ -70,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
+    { url: `${base}/partners`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/compare`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/compare/welders-log`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/compare/spreadsheets`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

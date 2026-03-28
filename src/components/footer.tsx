@@ -13,6 +13,7 @@ const PRODUCT_LINKS = [
   { label: "Resources", href: "/resources" },
   { label: "Help Center", href: "/help" },
   { label: "Glossary", href: "/glossary" },
+  { label: "Partners", href: "/partners" },
   { label: "Status", href: "/status" },
 ];
 
