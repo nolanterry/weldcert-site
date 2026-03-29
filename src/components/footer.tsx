@@ -12,6 +12,7 @@ const PRODUCT_LINKS = [
   { label: "Use Cases", href: "/use-cases" },
   { label: "Resources", href: "/resources" },
   { label: "Help Center", href: "/help" },
+  { label: "Getting Started", href: "/getting-started" },
   { label: "Glossary", href: "/glossary" },
   { label: "Partners", href: "/partners" },
   { label: "Careers", href: "/careers" },
