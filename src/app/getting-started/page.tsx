@@ -1,5 +1,3 @@
-"use client";
-
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CTASection } from "@/components/cta-section";
@@ -9,7 +7,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Getting Started with WeldCert | Quick Setup Guide",
   description: "Get started with WeldCert welding certification management in under 15 minutes. Step-by-step setup guide for welder qualification tracking.",
-  canonical: "https://weldcert.io/getting-started",
   openGraph: {
     title: "Getting Started with WeldCert | Quick Setup Guide",
     description: "Get started with WeldCert welding certification management in under 15 minutes. Step-by-step setup guide for welder qualification tracking.",
