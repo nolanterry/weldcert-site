@@ -19,6 +19,7 @@ const PRODUCT_LINKS = [
   { label: "Partners", href: "/partners" },
   { label: "Careers", href: "/careers" },
   { label: "Status", href: "/status" },
+  { label: "Reports", href: "/reports" },
 ];
 
 const RESOURCE_LINKS = [

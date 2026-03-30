@@ -3,6 +3,7 @@ import { AUTHORS } from "@/lib/authors";
 import { getAllTags } from "@/lib/blog-meta";
 import { GLOSSARY_TERMS } from "@/lib/glossary-data";
 import { WEBINARS } from "@/lib/webinar-data";
+import { REPORTS } from "@/lib/report-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://weldcert.io";
@@ -38,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "weld-visual-inspection-guide",
     "welder-requalification-frequency-guide",
     "welding-procedure-specification-guide",
+    { url: `${base}/reports`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
+    ...REPORTS.map((r) => ({ url: `${base}/reports/${r.slug}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 })),
   ];
 
   return [
@@ -95,5 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...GLOSSARY_TERMS.map((term) => ({ url: `${base}/glossary/${term.slug}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 })),
     { url: `${base}/webinars`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
     ...WEBINARS.map((w) => ({ url: `${base}/webinars/${w.slug}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 })),
+    { url: `${base}/reports`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
+    ...REPORTS.map((r) => ({ url: `${base}/reports/${r.slug}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 })),
   ];
 }
