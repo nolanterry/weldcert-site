@@ -14,6 +14,7 @@ const PRODUCT_LINKS = [
   { label: "Help Center", href: "/help" },
   { label: "Getting Started", href: "/getting-started" },
   { label: "Migration Guides", href: "/migrate-from" },
+  { label: "Webinars", href: "/webinars" },
   { label: "Glossary", href: "/glossary" },
   { label: "Partners", href: "/partners" },
   { label: "Careers", href: "/careers" },
