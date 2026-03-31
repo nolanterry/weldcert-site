@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CTASection } from "@/components/cta-section";
+import { CASE_STUDIES } from "@/lib/case-study-data";
 import { Clock, ShieldCheck, FileCheck, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -52,29 +53,69 @@ export default function CustomersPage() {
           </div>
         </section>
 
-        {/* Customer Stories Coming Soon */}
+        {/* Customer Stories */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Customer Stories Coming Soon
-            </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              We&apos;re collecting real stories from fabrication shops and contractors who use WeldCert every day.
-              Want to be featured? We&apos;d love to hear how WeldCert has helped your team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://app.weldcert.io/sign-up"
-                className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-              >
-                Start Your Free Trial <ArrowRight size={18} />
-              </a>
-              <a
-                href="/demo"
-                className="inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-3 rounded-lg transition-colors"
-              >
-                Book a Demo
-              </a>
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Customer Success Stories
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                See how fabrication shops and welding companies use WeldCert to
+                eliminate spreadsheet chaos and achieve perfect audit compliance.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {CASE_STUDIES.map((study) => (
+                <div
+                  key={study.slug}
+                  className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {study.companyName}
+                    </h3>
+                    <span className="bg-brand/10 text-brand text-sm px-3 py-1 rounded-full">
+                      {study.industry}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {study.hero.summary}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="bg-gray-50 px-4 py-2 rounded-lg">
+                      <div className="font-bold text-brand text-lg">
+                        {study.hero.keyMetric}
+                      </div>
+                      <div className="text-sm text-gray-600">Key Result</div>
+                    </div>
+                    <a
+                      href={`/customers/${study.slug}`}
+                      className="inline-flex items-center gap-1 text-brand font-semibold hover:text-brand-dark transition-colors"
+                    >
+                      Read Story <ArrowRight size={16} />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://app.weldcert.io/sign-up"
+                  className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                >
+                  Start Your Free Trial <ArrowRight size={18} />
+                </a>
+                <a
+                  href="/demo"
+                  className="inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-3 rounded-lg transition-colors"
+                >
+                  Book a Demo
+                </a>
+              </div>
             </div>
           </div>
         </section>
