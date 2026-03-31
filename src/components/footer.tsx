@@ -20,6 +20,7 @@ const PRODUCT_LINKS = [
   { label: "Careers", href: "/careers" },
   { label: "Status", href: "/status" },
   { label: "Reports", href: "/reports" },
+  { label: "Developers", href: "/developers" },
 ];
 
 const RESOURCE_LINKS = [
